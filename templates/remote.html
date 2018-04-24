@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <style>
+  #bright {
+    font-size: 28px;
+    }
+
+  #brightslide {
+    width: 200px;
+    height: 30px;
+    }
+  #colorbar {
+    width: 205px;
+    height: 30px;
+    }
+  </style>
+  </head>
+  <h1>Symmetry Labs Remote </h1>
+  <body>
+        <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.brightness.label(id='bright') }}<br>
+            {{ form.brightness(min=0, max=1, id='brightslide') }}
+                
+            {% for error in form.brightness.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.color.label(id='bright') }}<br>
+            {{ form.color(min=0, max=1, id='brightslide') }}<br>
+            <img src="{{url_for('static', filename='ColorBar.png')}}" id='colorbar'/>
+            {% for error in form.color.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.speed.label(id='bright') }}<br>
+            {{ form.speed(min=0, max=1, id='brightslide') }}<br>
+            {% for error in form.speed.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.pattern.label(id='bright') }}<br>
+            {{ form.pattern(id='brightslide') }}<br>
+            {% for error in form.pattern.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.clip.label(id='bright') }}<br>
+            {{ form.clip(id='brightslide') }}<br>
+            {% for error in form.clip.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.on_off.label(id='bright') }}<br>
+            {{ form.on_off(id='brightslide') }}<br>
+            {% for error in form.on_off.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit(id='brightslide') }}<br><br>{{form.clip1(id='brightslide')}} <br><br>{{form.clip2(id='brightslide')}} <br><br> {{form.clip3(id='brightslide')}} </p>
+
+    </form> 
+    
+  </body>
+</html>
