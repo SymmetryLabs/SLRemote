@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <style>
+  #bright {
+    font-size: 28px;
+    }
+
+  #brightslide {
+    width: 400px;
+    height: 50px;
+    font-size: 24px;
+    }
+  #colorbar {
+    width: 205px;
+    height: 30px;
+    }
+  #header {
+    font-size:;
+    }
+    h1{
+        font-size:112px;
+    }
+  </style>
+  </head>
+
+    <h1>undrcrd</h1>
+<body>  
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        
+        <p>
+            {{ form.event.label(id='bright') }}<br>
+            {{ form.event(id='brightslide') }}<br>
+            {% for error in form.event.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+     
+     <!--    <p>
+            {{ form.phone_number.label(id='bright') }}<br>
+            {{ form.phone_number(size=32, id='brightslide') }}<br>
+            {% for error in form.phone_number.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p> -->
+      
+        <p>{{ form.submit(id='brightslide') }}<br><br> </p>
+      
+
+    </form> 
+</body>
+</html>
