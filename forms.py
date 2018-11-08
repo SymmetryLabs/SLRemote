@@ -34,3 +34,16 @@ class TestForm(FlaskForm):
     
     age = DecimalRangeField('Age', default=0, validators=[DataRequired()])
     submit = SubmitField('Submit')
+
+class ArloForm(FlaskForm):
+    showLightShow = SubmitField("Light show")
+    showSolidColor = SubmitField("Solid color")
+
+    speed = DecimalRangeField("Speed")
+    setSpeed = SubmitField("Send")
+
+    brightness = DecimalRangeField("Brightness")
+    setBrightness = SubmitField("Send")
+
+    solidColor = DecimalRangeField(label=("Color"))
+    setSolidColor = SubmitField("Send")

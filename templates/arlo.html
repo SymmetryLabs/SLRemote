@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+        <style>
+         body {
+             max-width: 20em;
+             margin: 2em;
+             background: #112;
+             color: #DDDDE0;
+             font-family: Helvetica, sans-serif;
+             font-size: 16pt;
+         }
+         h2 {
+             font-size: 18pt;
+         }
+         h1 {
+             font-size: 20pt;
+         }
+         input {
+             height: 3em;
+             width: 100%;
+             margin: 1em 0;
+             display:block;
+         }
+         #colorbar {
+             width: 100%;
+             height: 30px;
+         }
+        </style>
+    </head>
+    <h1>Arlo Hotels Light Show Console</h1>
+    <body>
+        <form action="" method="post">
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.showLightShow(id='lightShow') }}
+                {{ form.showSolidColor(id='solidColor') }}
+            </p>
+
+            <h2>Solid color parameters</h2>
+            <p>
+                {{ form.solidColor.label(id='color') }}<br>
+                <img src="{{url_for('static', filename='ColorBar.png')}}" id='colorbar'/><br>
+                {{ form.solidColor(min=0, max=1, id='brightslide') }}<br>
+                {{ form.setSolidColor() }}
+            </p>
+
+            <h2>Show parameters</h2>
+            <p>
+                {{ form.speed.label(id='bright') }}<br>
+                {{ form.speed(min=0, max=1, id='brightslide') }}
+                {{ form.setSpeed() }}
+            </p>
+
+            <h2>Global parameters</h2>
+            <p>
+                {{ form.brightness.label(id='bright') }}<br>
+                {{ form.brightness(min=0, max=1, id='brightslide') }}
+                {{ form.setBrightness() }}
+            </p>
+        </form>
+    </body>
+</html>
