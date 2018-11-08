@@ -45,5 +45,8 @@ class ArloForm(FlaskForm):
     brightness = DecimalRangeField("Brightness")
     setBrightness = SubmitField("Send")
 
+    temperature = DecimalRangeField("Temperature")
+    setTemperature = SubmitField("Send")
+
     solidColor = DecimalRangeField(label=("Color"))
     setSolidColor = SubmitField("Send")

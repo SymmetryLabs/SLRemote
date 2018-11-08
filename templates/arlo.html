@@ -55,6 +55,11 @@
 
             <h2>Global parameters</h2>
             <p>
+                {{ form.temperature.label(id='bright') }}<br>
+                {{ form.temperature(min=0, max=1, id='brightslide') }}
+                {{ form.setTemperature() }}
+            </p>
+            <p>
                 {{ form.brightness.label(id='bright') }}<br>
                 {{ form.brightness(min=0, max=1, id='brightslide') }}
                 {{ form.setBrightness() }}

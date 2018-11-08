@@ -73,6 +73,8 @@ def arlo():
             change_brightness(float(form.brightness.data))
         elif form.setSolidColor.data:
             send_osc("/lx/channel/3/pattern/1/color/hue", float(form.solidColor.data))
+        elif form.setTemperature.data:
+            send_osc("/lx/master/effect/1/amount", float(form.temperature.data))
         return redirect(url_for('arlo'))
     return render_template('arlo.html', form=form)
 
