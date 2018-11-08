@@ -64,9 +64,9 @@ def arlo():
     form = ArloForm()
     if form.validate_on_submit(): 
         if form.showSolidColor.data:
-            send_osc("/lx/engine/crossfader", 1)
+            send_osc("/lx/engine/crossfader", 1.0)
         elif form.showLightShow.data:
-            send_osc("/lx/engine/crossfader", 0)
+            send_osc("/lx/engine/crossfader", 0.0)
         elif form.setSpeed.data:
             change_speed(float(form.speed.data))
         elif form.setBrightness.data:
