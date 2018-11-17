@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+   <key>Label</key>
+   <string>run-slremote</string>
+   <key>ProgramArguments</key>
+   <array><string>/usr/local/bin/python3</string><string>SLRemote.py</string></array>
+   <key>RunAtLoad</key>
+   <true/>
+   <key>WorkingDirectory</key>
+   <string>/Users/symmetrylabs/SLRemote</string>
+</dict>
+</plist>
