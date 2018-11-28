@@ -41,7 +41,7 @@
             <h2>Solid color parameters</h2>
             <p>
                 {{ form.solidColor.label(id='color') }}<br>
-                <img src="{{url_for('static', filename='ColorBar.png')}}" id='colorbar'/><br>
+                <img src="static/ColorBar.png" id='colorbar'/><br>
                 {{ form.solidColor(min=0, max=1, id='brightslide') }}<br>
                 {{ form.setSolidColor() }}
             </p>
